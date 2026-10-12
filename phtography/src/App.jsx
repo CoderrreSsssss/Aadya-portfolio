@@ -13,15 +13,15 @@ import FeaturedFrame from './components/FeaturedFrame'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 export default function App() {
-  useEffect(() => { document.documentElement.dataset.theme = site.theme || 'midnight' }, [])
+  useEffect(() => { document.documentElement.dataset.theme = site.theme || 'light' }, [])
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 30 })
   return (
     <MotionConfig reducedMotion="user">
       <motion.div style={{ scaleX }} className="grad-bg fixed inset-x-0 top-0 z-50 h-[3px] origin-left" aria-hidden="true" />
       <div className="pointer-events-none fixed inset-0 -z-0 overflow-hidden" aria-hidden="true">
-        <motion.div className="grad-bg absolute -left-40 top-1/4 h-96 w-96 rounded-full opacity-[0.12] blur-3xl" animate={{ x: [0, 120, 0], y: [0, 80, 0] }} transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }} />
-        <motion.div className="grad-bg absolute -right-40 bottom-1/4 h-96 w-96 rounded-full opacity-[0.1] blur-3xl" animate={{ x: [0, -120, 0], y: [0, -80, 0] }} transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut' }} />
+        <motion.div className="grad-bg absolute -left-40 top-1/4 h-96 w-96 rounded-full opacity-[0.18] blur-3xl" animate={{ x: [0, 120, 0], y: [0, 80, 0] }} transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }} />
+        <motion.div className="grad-bg absolute -right-40 bottom-1/4 h-96 w-96 rounded-full opacity-[0.15] blur-3xl" animate={{ x: [0, -120, 0], y: [0, -80, 0] }} transition={{ duration: 26, repeat: Infinity, ease: 'easeInOut' }} />
       </div>
       <Navbar />
       <main className="relative z-10">

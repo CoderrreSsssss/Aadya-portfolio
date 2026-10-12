@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/make-manifest.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/make-manifest.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

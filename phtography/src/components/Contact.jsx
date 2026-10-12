@@ -22,7 +22,7 @@ export default function Contact() {
             </li>
           ))}
         </ul>
-        {site.email && <a href={`mailto:${site.email}`} className="mt-10 inline-block grad-bg px-7 py-3 text-sm font-medium text-black transition hover:brightness-110">Email {site.name.split(' ')[0]}</a>}
+        {site.email && <a href={`mailto:${site.email}`} className="mt-10 inline-block grad-bg px-7 py-3 text-sm font-medium text-white transition hover:brightness-110">Email {site.name.split(' ')[0]}</a>}
       </div>
     </section>
   )
